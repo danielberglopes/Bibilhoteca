@@ -1,4 +1,5 @@
-<nav class="navbar top-navbar" style="height: 12REM; background-color: #244c35;">
+<nav class="navbar top-navbar" style="height: 6rem;  background-color: #244c35;">
+
     <div class="container-fluid">
         <div class="navbar-content ">
      

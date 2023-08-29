@@ -2,7 +2,8 @@
 <html lang="pt">
 
 <head>
-    <title>Registro de finacias - Login</title>
+<link rel="shortcut icon" href="img\kisspng-school-library-drawing-5ae5b9eba6cc01.6430956915250047796832.jpg">
+    <title>Biblioteca oline Login</title>
    
     <link rel='stylesheet' type='text/css' href='css/login.css' media='screen' />
 

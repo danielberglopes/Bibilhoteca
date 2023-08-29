@@ -71,13 +71,13 @@ class ProductsController extends Controller
 
         $product->update($input);
         return redirect()->route('products.index')
-            ->with('success','Product updated successfully.');
+            ->with('success','Produto atualizado com sucesso!');
     }
-
+    
     public function destroy(Products $product)
     {
         $product->delete();
         return redirect()->route('products.index')
-            ->with('success','Product deleted successfully');
+            ->with('success','Produto excluído com sucesso!');
     }
 }

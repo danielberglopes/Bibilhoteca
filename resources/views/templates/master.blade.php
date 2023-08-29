@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{config('app.name')}}</title>
+    
+    <link rel="shortcut icon" href="img\kisspng-school-library-drawing-5ae5b9eba6cc01.6430956915250047796832.jpg">
+    <title>Biblioteca oline</title>
     <link rel="shortcut icon" href="{{asset('favicon.ico')}}">
     <!-- plugin css -->
     <link href="{{asset('css/iconfont.css')}}" rel="stylesheet" />
@@ -28,7 +30,7 @@
     </div>
     <!-- partial -->
 
-    <div class="page-wrapper">
+    <div class="page-wrapper" style="background: #efeeea;">
         <div class="page-content">
 
             @yield('content')
