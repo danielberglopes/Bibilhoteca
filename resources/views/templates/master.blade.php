@@ -37,12 +37,12 @@
 
 
         <!-- partial:partials/_footer.html -->
-        <footer class="footer border-top">
+        <!-- <footer class="footer border-top">
             <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between py-3 small">
                 <p class="text-muted mb-1 mb-md-0">Copyright © {{now()->format('Y')}} <a href="/" target="_blank">{{config('app.name')}}</a>.</p>
                 <p class="text-muted">Handcrafted With <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
             </div>
-        </footer>
+        </footer> -->
         <!-- partial -->
 
     </div>

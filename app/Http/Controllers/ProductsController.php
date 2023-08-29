@@ -5,9 +5,15 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    public function index()
+
+    // public function indexx(){
+    //     return view ('/products');
+    // }
+    public function index(Request $request)
     {
-        $products = Products::all();
+        // $products = Products::all();
+        $nome = $request->input('name_completo');
+        $products =  Products::where('name', 'LIKE', '%' . $nome . '%')->get();
         return view('products.index', compact('products'));
     }
 
@@ -21,9 +27,9 @@ class ProductsController extends Controller
         $request->validate([
             'name' => 'required',
             'detail' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required',
         ]);
-
+       
         $input = $request->all();
         if ($image = $request->file('image')) {
             $destinationPath = 'img/';
@@ -33,9 +39,9 @@ class ProductsController extends Controller
         }
         Products::create($input);
         return redirect()->route('products.index')
-            ->with('success','Product created successfully.');
+            ->with('success','Produto criado com sucesso!');
     }
-
+   
     public function show(Products $product)
     {
         return view('products.show', compact('product'));

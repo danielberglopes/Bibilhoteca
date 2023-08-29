@@ -44,7 +44,7 @@ class PostsController extends Controller
         return response()->json(['success'=>'Post saved successfully.']);
     }
 
-
+    
     public function edit(Request $request)
     {
         $where = [

@@ -1,4 +1,4 @@
-@extends('templates.master')
+<!-- @extends('templates.master')
 @section('content')
     <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
         <div>
@@ -17,7 +17,7 @@
                 <table class="table table-sm table-hover mb-0 data-table">
                     <thead>
                     <tr>
-                        <th>#</th>
+                        <th>2</th>
                         <th>Post Title</th>
                         <th>Post Description</th>
                         <th>Actions</th>
@@ -179,4 +179,4 @@
             });
         });
     </script>
-@endsection
+@endsection -->
