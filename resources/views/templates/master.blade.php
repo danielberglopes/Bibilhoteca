@@ -27,6 +27,7 @@
     <div class="horizontal-menu">
         @include('templates.top_menu')
         @include('templates.bottom_menu')
+    
     </div>
     <!-- partial -->
 
