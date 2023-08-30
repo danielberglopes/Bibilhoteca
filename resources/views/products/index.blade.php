@@ -161,7 +161,12 @@ th{
      svg{
        margin-top: 16px;
      }
-     
+     @media(max-width:700px) {
+    .telaAm{
+        max-width: 100%;
+    overflow: scroll;
+    }
+    }
  }
  
    </style>
@@ -174,22 +179,22 @@ th{
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header" style="    height: 7rem;">
                                
-                    <a href="{{route('products.create')}}" style=" color:#fff;    background-color: #244c35;
-                     border: 1px solid #244c35; font-size: 20px; "  class="btn btn-info btn-icon-text mb-2 mb-md-0">
+                    <a href="{{route('products.create')}}" style=" color:#fff;     background-color: #244c35;
+                     border: 1px solid #244c35; font-size: 20px;     margin-top: 2rem;"  class="btn btn-info btn-icon-text mb-2 mb-md-0 mt4">
                 <i data-feather="plus"></i> adicionar novo produto
             </a>
 
 
 
-<form class="for01" method="GET"   style="float: right;">
+<form class="for01" method="GET"   style="float: right;     margin-top: 2rem;">
   <input type='text' name='name_completo' placeholder='O que você procura?'>
   <button type='submit' class="pesquisa">Pesquisar</button>
 </form>
                    
                     </div>
-                    <div class="card-body">
+                    <div class="card-body telaAm">
                     @if ($message = session('success'))
                 <div class="alert alert-success">
                     <p>{{ $message }}</p>
@@ -199,10 +204,10 @@ th{
                          <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                <th style="font-size: 18px;">Nome Do Aluno </th>
-                                    <th style="font-size: 18px;">Nome Do livro</th>
-                                    <th style="font-size: 18px;"> Quantidade livros </th>
-                                    <th style="font-size: 18px;"> Data</th>
+                                <th style="font-size: 18px; text-align: center;">Nome Do Aluno </th>
+                                    <th style="font-size: 18px; text-align: center;">Nome Do livro</th>
+                                    <th style="font-size: 18px; text-align: center;"> Quantidade livros </th>
+                                    <th style="font-size: 18px; text-align: center;"> Data</th>
                                     <th style="text-align: center; font-size: 18px;" > Tipos de Ação   </th>
                                 </tr>
                             </thead>
@@ -212,10 +217,13 @@ th{
                             @foreach($products as $index => $val)
                         <tr>
                             <!-- <td>{{++$index}}</td> -->
-                            <td style="font-size: 18px;">{{$val->detail}}</td>
+                            <td style="font-size: 18px; text-align: center;
+">{{$val->detail}}</td>
                             
-                            <td style="font-size: 18px;">{{$val->name}}</td>
-                            <td style="font-size: 18px;">{{$val->image}}</td>
+                            <td style="font-size: 18px; text-align: center;
+">{{$val->name}}</td>
+                            <td style="font-size: 18px; text-align: center;
+">{{$val->image}}</td>
                            
                             <td style="font-size: 18px;">{{ $val->created_at }}</td>
                             <td>
