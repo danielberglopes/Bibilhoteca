@@ -199,11 +199,11 @@ th{
                          <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                <th style="font-size: 26px;">Nome Do Aluno </th>
-                                    <th style="font-size: 21px;">Nome Do livro</th>
-                                    <th style="font-size: 21px;"> Quantidade livros </th>
-                                    <th style="font-size: 21px;"> Data</th>
-                                    <th style="text-align: center; font-size: 21px;" > Tipos de Ação   </th>
+                                <th style="font-size: 18px;">Nome Do Aluno </th>
+                                    <th style="font-size: 18px;">Nome Do livro</th>
+                                    <th style="font-size: 18px;"> Quantidade livros </th>
+                                    <th style="font-size: 18px;"> Data</th>
+                                    <th style="text-align: center; font-size: 18px;" > Tipos de Ação   </th>
                                 </tr>
                             </thead>
 
@@ -212,12 +212,12 @@ th{
                             @foreach($products as $index => $val)
                         <tr>
                             <!-- <td>{{++$index}}</td> -->
-                            <td style="font-size: 21px;">{{$val->detail}}</td>
+                            <td style="font-size: 18px;">{{$val->detail}}</td>
                             
-                            <td style="font-size: 21px;">{{$val->name}}</td>
-                            <td style="font-size: 21px;">{{$val->image}}</td>
+                            <td style="font-size: 18px;">{{$val->name}}</td>
+                            <td style="font-size: 18px;">{{$val->image}}</td>
                            
-                            <td style="font-size: 21px;">{{ $val->created_at }}</td>
+                            <td style="font-size: 18px;">{{ $val->created_at }}</td>
                             <td>
                                 <form style="margin-left: 1rem;" action="{{ route('products.destroy',$val->id) }}" method="POST">
                                     {{ csrf_field()  }}

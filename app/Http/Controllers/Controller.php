@@ -24,7 +24,9 @@ return redirect()->back()->with('danger', 'Email ou senha inválida');
  }
   }
   
-
+   public function Admin(){
+     return view( 'osuario');
+   }
  
 }
 

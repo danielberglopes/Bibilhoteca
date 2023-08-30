@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->integer('admin')->default(5); // Definindo o valor padrão como 0
+            $table->integer('osuario')->default(0); // Definindo o valor padrão como 0
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

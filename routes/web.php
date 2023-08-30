@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Http\Middleware;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
@@ -18,7 +18,8 @@ use App\Http\Controllers\Controller;
 
 Route::match([ 'get',  'post'], '/', [Controller::class, 'login']);
 
-Route::resource('products', ProductsController::class, );
+Route::resource('products', ProductsController::class, )->middleware('admin');
+
 Route::get('/index', function(){
     return view ('index');
 });
@@ -29,4 +30,6 @@ Route::prefix('posts')->group(function () {
     Route::post('edit', [PostsController::class, 'edit']);
     Route::match(['get', 'post'], '/auth', [Controller::class, 'auth'])->name('auth.uer');
     Route::delete('destroy', [PostsController::class, 'destroy']);
-});
+})->middleware('admin');
+
+Route::match(['get', 'post'], '/osuario', [Controller::class, 'Admin'])->middleware('osuario');
