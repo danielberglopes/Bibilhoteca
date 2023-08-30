@@ -97,12 +97,7 @@ body{
     animation: shadow 1.8s infinite alternate;
 }
 
-    @media(max-width:430px) {
-    .lopa-img img {
-        max-width: 100%;
-    overflow: scroll;
-    }
-    }
+    
 @keyframes float{
     0%{
         transform: translateY(0);
